@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogisCam - Recherche de logements</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">🏠 Logis<span>Cam</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#logements">Logements</a></li>
+                <li><a href="#villes">Villes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="ouvrirMenu()">☰</button>
+        </nav>
+    </header>
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Trouvez votre logement idéal</h1>
+            <p>
+                Recherchez facilement un appartement, une maison ou un studio
+                au Cameroun.
+            </p>
+            <div class="search-box">
+
+                <div class="search-field">
+                    <label>📍 Localisation</label>
+                    <select id="ville">
+                        <option value="">Choisir une ville</option>
+                        <option value="Douala">Douala</option>
+                        <option value="Yaoundé">Yaoundé</option>
+                        <option value="Bafoussam">Bafoussam</option>
+                        <option value="Garoua">Garoua</option>
+                    </select>
+                </div>
+
+                <div class="search-field">
+                    <label>🏠 Type de logement</label>
+                    <select id="type">
+                        <option value="">Tous les types</option>
+                        <option value="Appartement">Appartement</option>
+                        <option value="Studio">Studio</option>
+                        <option value="Maison">Maison</option>
+                    </select>
+                </div>
+
+                <div class="search-field">
+                    <label>💰 Budget maximum</label>
+                    <select id="prix">
+                        <option value="">Tous les prix</option>
+                        <option value="50000">50 000 FCFA</option>
+                        <option value="100000">100 000 FCFA</option>
+                        <option value="150000">150 000 FCFA</option>
+                        <option value="200000">200 000 FCFA</option>
+                        <option value="300000">300 000 FCFA</option>
+                    </select>
+                </div>
+
+                <button class="search-btn" onclick="rechercher()">
+                    🔎 Rechercher
+                </button>
+
+            </div>
+        </div>
+    </section>
+    <section class="logements" id="logements">
+
+        <div class="section-title">
+            <h2>Logements disponibles</h2>
+            <p id="resultats-info">Chargement des logements...</p>
+        </div>
+
+        <div class="cards" id="cards"></div>
+
+    </section>
+    <section class="villes" id="villes">
+
+        <div class="section-title">
+            <h2>Explorez par ville</h2>
+            <p>Trouvez facilement un logement dans votre ville</p>
+        </div>
+
+        <div class="ville-container">
+
+            <div class="ville" onclick="choisirVille('Douala')">
+                <h3>Douala</h3>
+                <p>250+ logements</p>
+            </div>
+
+            <div class="ville" onclick="choisirVille('Yaoundé')">
+                <h3>Yaoundé</h3>
+                <p>180+ logements</p>
+            </div>
+
+            <div class="ville" onclick="choisirVille('Bafoussam')">
+                <h3>Bafoussam</h3>
+                <p>90+ logements</p>
+            </div>
+
+            <div class="ville" onclick="choisirVille('Garoua')">
+                <h3>Garoua</h3>
+                <p>60+ logements</p>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact" class="contact">
+
+    <div class="contact-container">
+
+        <h2>Contactez-nous</h2>
+
+        <p>
+            Vous avez une question concernant un logement ?
+            Contactez-nous.
+        </p>
+
+        <div class="contact-infos">
+
+            <div class="contact-item">
+                <span>📞</span>
+                <div>
+                    <h3>Téléphone</h3>
+                    <a href="tel:+237691453890">
+                        +237 691 45 38 90
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>📧</span>
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:contact@logiscam.com">
+                        contact@logiscam.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <span>📍</span>
+                <div>
+                    <h3>Adresse</h3>
+                    <p>Douala, Cameroun</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <footer>
+        <div class="logo">🏠 Logis<span>Cam</span></div>
+
+        <p>
+            © 2026 LogisCam - Plateforme de recherche de logements
+        </p>
+    </footer>
+
+
+    <script src="logements.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
